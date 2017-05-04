@@ -1,16 +1,15 @@
 # docker-rainloop
-[![](https://images.microbadger.com/badges/image/solidnerd/rainloop.svg)](http://microbadger.com/images/solidnerd/rainloop "Get your own image badge on microbadger.com")
 
 A minimalistic docker version of [Rainloop Community Edition](http://www.rainloop.net/)
 
-## Version: [1.10.5.192](http://www.rainloop.net/changelog/)
+## Version: [1.11.0.203](http://www.rainloop.net/changelog/)
 
 ## Quickstart
 
 To Start the container use the following command.
 
 ```
-docker run -d -p "80:80" solidnerd/rainloop:1.10.5.192
+docker run -d -p "80:80" interlegis/alpine-rainloop:1.11.0.203-2
 ```
 
 **or**
@@ -24,7 +23,7 @@ use [docker-compose](https://github.com/docker/compose) .
 ## Save the Rainloop data persistent
 If you want the Rainloop data persistent than use the exposed Volume with a command like this:
 ```
-docker run -d -p "80:80" -v $(pwd)/data:/var/www/rainloop/data solidnerd/rainloop:1.10.5.192
+docker run -d -p "80:80" -v $(pwd)/data:/var/www/rainloop/data interlegis/alpine-rainloop:1.11.0.203-2
 ```
 
 ## Rainloop Specifica
@@ -40,3 +39,4 @@ This container supports all Database PHP extensions for the contacts:
 The MIT License (MIT)
 
 Copyright (c) 2016 Niclas Mietz
+Updated to 1.11.0.203 by Interlegis (2017)
