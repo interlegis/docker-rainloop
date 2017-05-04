@@ -28,6 +28,7 @@ RUN echo "@commuedge https://nl.alpinelinux.org/alpine/edge/community" >> /etc/a
  
 
 ADD httpd.conf /etc/apache2/httpd.conf
+ADD php-maxsize.ini /etc/php5/conf.d/maxsize.ini
 
 WORKDIR $RAINLOOP_HOME
 
