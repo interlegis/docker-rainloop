@@ -2,8 +2,8 @@ version: '2'
 services:
   rainloop:
     container_name: "rainloop"
-#    image: solidnerd/rainloop:1.10.5.192
-    build: .
+    image: interlegis/alpine-rainloop:1.12.1
+#    build: .
     volumes:
       - ./data:/var/www/rainloop/data
     ports:
