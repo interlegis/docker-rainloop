@@ -1,7 +1,7 @@
-FROM alpine:3.7
+FROM alpine:3.8
 MAINTAINER Niclas Mietz niclas@mietz.io
 
-ENV RAINLOOP_VERSION 1.12.1
+ENV RAINLOOP_VERSION 1.13.0
 
 ENV RAINLOOP_BUILD="/etc/rainloop" \
     RAINLOOP_HOME="/var/www/rainloop" \
@@ -15,9 +15,7 @@ RUN \
   rm -fr /usr/bin/php
 
 
-RUN echo "@commuedge https://nl.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
-    echo "@testing https://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories  && \
-    mkdir -p ${RAINLOOP_HOME} && \
+RUN mkdir -p ${RAINLOOP_HOME} && \
     cd ${RAINLOOP_HOME} && \
     curl -L -O https://github.com/RainLoop/rainloop-webmail/releases/download/v${RAINLOOP_VERSION}/rainloop-community-${RAINLOOP_VERSION}.zip && \
     unzip *.zip && \
