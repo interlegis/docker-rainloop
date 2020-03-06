@@ -1,7 +1,7 @@
 FROM alpine:3.8
-MAINTAINER Niclas Mietz niclas@mietz.io
+MAINTAINER Fabio Rauber fabiorauber@gmail.com
 
-ENV RAINLOOP_VERSION 1.13.0
+ENV RAINLOOP_VERSION 1.14.0
 
 ENV RAINLOOP_BUILD="/etc/rainloop" \
     RAINLOOP_HOME="/var/www/rainloop" \
